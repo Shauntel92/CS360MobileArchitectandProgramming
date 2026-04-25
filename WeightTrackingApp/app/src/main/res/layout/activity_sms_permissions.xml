@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".SmsPermissionActivity">
+
+    <TextView
+        android:id="@+id/tvSmsTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Goal Notifications"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSmsDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Allow SMS access so the app can send a message when you reach your goal weight."
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvSmsTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPermissionStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Permission status: Not granted"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tvSmsDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnGrantSmsPermission"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Grant SMS Permission"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tvPermissionStatus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPermissionResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="If permission is granted, SMS goal alerts will be enabled. If denied, the app will still work without SMS notifications."
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnGrantSmsPermission"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnBackToWeights"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Back to Weight Log"
+        android:layout_marginTop="28dp"
+        app:layout_constraintTop_toBottomOf="@id/tvPermissionResult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
